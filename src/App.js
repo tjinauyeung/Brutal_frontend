@@ -4,6 +4,7 @@ import Brutal from './Brutal';
 class App extends React.Component {
     render() {
         return (
+        	
 	        <Brutal />
         );
     }
