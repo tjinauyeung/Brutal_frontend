@@ -1,9 +1,10 @@
 import React from 'react';
+import Brutal from './Brutal';
 
 class App extends React.Component {
     render() {
         return (
-            <h1>Hello World!</h1>
+	        <Brutal />
         );
     }
 }
