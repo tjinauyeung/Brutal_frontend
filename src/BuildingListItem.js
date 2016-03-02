@@ -8,6 +8,8 @@ class BuildingListItem extends React.Component {
 
 componentWillMount() {
  	this.setState({
+ 		id: this.props.id,
+ 		key: this.props.key,
  		name: this.props.name,
  		location: this.props.location,
  		build_year: this.props.build_year,
@@ -18,7 +20,7 @@ componentWillMount() {
 
 	render() {
 		return(
-			<Link to="/">
+			<Link to={"/building/" + this.state.id }>
 				<div className="">
 					<ul>
 						<li>Name: <strong>{this.state.name}</strong></li>

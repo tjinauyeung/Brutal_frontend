@@ -1,7 +1,7 @@
 import React from 'react';
 import jQuery from 'jquery';
 
-class BuildingForm extends React.Component {
+class ReviewForm extends React.Component {
 	constructor() {
 		super();
 
@@ -13,6 +13,8 @@ class BuildingForm extends React.Component {
 	addBuilding(event) {
 		event.preventDefault();
 
+		let buildingId = this.props.params.buildingId
+
 		let component = this
 		let building = {
 			id: null,
@@ -22,8 +24,6 @@ class BuildingForm extends React.Component {
 			architect: this.refs.architect.value,
 			build_year: this.refs.build_year.value
 		}
-
-		console.log(building)
 
 		jQuery.ajax ({
     	type: "POST",
@@ -48,16 +48,21 @@ class BuildingForm extends React.Component {
 
 	render() {
 		return( 
-			<form onSubmit={this.addBuilding.bind(this)}>
-				<input ref="name" placeholder="Building name"/>
-				<input ref="location" placeholder="Location"/>
-				<input ref="architect" placeholder="Architect"/>
-				<input ref="build_year" placeholder="Build Year"/>
-				<input ref="image" placeholder="Image"/>
+			<form>
+				<p>Leave a review!</p>
+				<input ref="name" placeholder="Username"/>
+				<textarea ref="description" placeholder="leave your review here"/>
+				<select onChange={this.changeRating.bind(this)}>
+					 <option value="1">1</option>
+					 <option value="2">2</option>
+					 <option value="3">3</option>
+					 <option value="4">4</option>
+					 <option value="5">5</option>
+				</select>
 				<button type="submit">Add</button>
 			</form>
 		)
 	}
 }
 
-export default BuildingForm;
+export default ReviewForm;
