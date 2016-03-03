@@ -47,13 +47,19 @@ class BuildingForm extends React.Component {
 	}
 
 	render() {
+
+		let form ={
+			backgroundColor: '#e8e8e8'
+		}
+
 		return( 
-			<form onSubmit={this.addBuilding.bind(this)}>
-				<input ref="name" placeholder="Building name"/>
-				<input ref="location" placeholder="Location"/>
-				<input ref="architect" placeholder="Architect"/>
-				<input ref="build_year" placeholder="Build Year"/>
-				<input ref="image" placeholder="Image"/>
+			<form style={form} onSubmit={this.addBuilding.bind(this)}>
+				<h3>Add a building:</h3>
+				<div><p>Building name: <input ref="name" placeholder="Gustavo Capanema Palace"/></p></div>
+				<div><p>Location: <input ref="location" placeholder="Rio de Janeiro"/></p></div>
+				<div><p>Architect: <input ref="architect" placeholder="Le Corbusier"/></p></div>
+				<div><p>Build year: <input ref="build_year" placeholder="1959"/></p></div>
+				<div><p>Image (url): <input ref="image" placeholder="http://"/></p></div>
 				<button type="submit">Add</button>
 			</form>
 		)

@@ -10,26 +10,24 @@ class ReviewForm extends React.Component {
 		}		
 	}
 
-	addBuilding(event) {
+	submitReview(event) {
 		event.preventDefault();
 
-		let buildingId = this.props.params.buildingId
-
+		let buildingId = this.props.id
 		let component = this
-		let building = {
+
+		let review = {
 			id: null,
-			image: this.refs.image.value,
 			name: this.refs.name.value,
-			location: this.refs.location.value,
-			architect: this.refs.architect.value,
-			build_year: this.refs.build_year.value
+			description: this.refs.description.value,
+			rating: this.state.rating
 		}
 
 		jQuery.ajax ({
     	type: "POST",
-    	url: "https://whispering-refuge-37381.herokuapp.com/buildings/",
+    	url: "https://whispering-refuge-37381.herokuapp.com/buildings/" + buildingId + "/reviews/",
     	data: JSON.stringify ({
-    		building: building
+    		review: review
     	}),
     	contentType: "application/json",
     	dataType: "json"
@@ -47,8 +45,13 @@ class ReviewForm extends React.Component {
 	}
 
 	render() {
+		
+		const form ={
+			backgroundColor: '#e8e8e8'
+		}
+
 		return( 
-			<form>
+			<form style={form} onSubmit={this.submitReview.bind(this)}>
 				<p>Leave a review!</p>
 				<input ref="name" placeholder="Username"/>
 				<textarea ref="description" placeholder="leave your review here"/>

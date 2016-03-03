@@ -16,12 +16,11 @@ class Review extends React.Component {
 
 	render() {
 		return(
-			<div>
-        <p>{this.state.name}</p>
-        <p>{this.state.description}</p>
-        <p>{this.state.rating}</p>
-			</div>
-
+      <ul>
+        <li><em>By: {this.state.name}</em></li>
+        <li><span>{this.state.description}</span></li>
+        <li>Appreciation: <strong>{this.state.rating}</strong></li>
+      </ul>
 		);
 	}
 }

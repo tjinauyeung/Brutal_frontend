@@ -10,8 +10,8 @@ ReactDOM.render((
 	<Router history={browserHistory}>
 		<Route path="/" component={App}>
 			<IndexRoute component={Brutal} />
+			<Route path="building/:buildingId" component={Building} />
+			<Route path="*" component={PageNotFound}/>
 		</Route>
-		<Route path="building/:buildingId" component={Building} />
-		<Route path="*" component={PageNotFound}/>
 	</Router>
 ), document.getElementById('root'));

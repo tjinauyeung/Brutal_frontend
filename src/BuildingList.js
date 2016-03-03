@@ -35,18 +35,21 @@ class BuildingList extends React.Component {
 
 	renderBuilding(building) {
 		return (
-			<BuildingListItem id={building.id} key={building.id} name={building.name} location={building.location} build_year={building.build_year} architect={building.architect} rating={building.rating}/>
-		);
+			<BuildingListItem id={building.id} key={building.id} name={building.name} image={building.image} location={building.location} build_year={building.build_year} architect={building.architect} rating={building.rating}/>
+		)
 	}
 
 	render() {
+
 		return(
-			<div>
-				<button href="#" onClick={this.showBuildingForm.bind(this)}>Add Building</button>
+			<section>
+				<h2>Buildinglist</h2>
+
+				<button href="#" onClick={this.showBuildingForm.bind(this)}>Toggle Form</button>
 				{this.state.addbuildingform ? <BuildingForm onChange={this.reload.bind(this)} /> : "" }
-				<h2>Here is a list of all the buildings:</h2>
+
 				{this.state.buildings.map(this.renderBuilding.bind(this),this)}
-			</div>
+			</section>
 		);
 	}
 }

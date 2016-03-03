@@ -1,11 +1,12 @@
 import React from 'react';
-import Brutal from './Brutal';
+import { IndexRoute } from 'react-router';
 
 class App extends React.Component {
     render() {
-        return (
-        	
-	        <Brutal />
+        return (    
+        	<div>    	
+	        	{this.props.children}
+	        </div>
         );
     }
 }
