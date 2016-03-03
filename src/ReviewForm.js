@@ -45,24 +45,27 @@ class ReviewForm extends React.Component {
 	}
 
 	render() {
-		
-		const form ={
-			backgroundColor: '#e8e8e8'
+
+		const btn = {
+			marginTop: '20px'
 		}
 
 		return( 
-			<form style={form} onSubmit={this.submitReview.bind(this)}>
-				<p>Leave a review!</p>
-				<input ref="name" placeholder="Username"/>
-				<textarea ref="description" placeholder="leave your review here"/>
-				<select onChange={this.changeRating.bind(this)}>
-					 <option value="1">1</option>
-					 <option value="2">2</option>
-					 <option value="3">3</option>
-					 <option value="4">4</option>
-					 <option value="5">5</option>
-				</select>
-				<button type="submit">Add</button>
+			<form onSubmit={this.submitReview.bind(this)}>
+				<h2>Leave a review!</h2>
+				<div><p>Your name:</p><input ref="name" placeholder="Username"/></div>
+				<div><p>Review:</p><textarea ref="description" placeholder="leave your review here"/></div>
+				<div>
+					<p>Rating:</p>
+					<select onChange={this.changeRating.bind(this)}>
+						 <option value="1">1</option>
+						 <option value="2">2</option>
+						 <option value="3">3</option>
+						 <option value="4">4</option>
+						 <option value="5">5</option>
+					</select>
+				</div>
+				<button style={btn} type="submit">Add</button>
 			</form>
 		)
 	}

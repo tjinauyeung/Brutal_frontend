@@ -34,12 +34,8 @@ class ReviewList extends React.Component {
 
 	render() {
 
-    const reviews = {
-      backgroundColor: '#e8e8e8'
-    }
-
 		return(
-			<div style={reviews}>
+			<div>
 				<h2>Reviews:</h2>
 				{this.state.reviews.map(this.renderReview.bind(this), this)}
 				<ReviewForm id={this.props.id} onChange={this.reload.bind(this)}/>

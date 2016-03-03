@@ -15,11 +15,23 @@ class Review extends React.Component {
   }
 
 	render() {
+
+    const review = {
+      listStyleType: 'none',
+      paddingLeft: '10px',
+      backgroundColor: '#e8e8e8'
+    }
+    
+
+    const item = {
+      lineHeight: '30px'
+    }
+
 		return(
-      <ul>
-        <li><em>By: {this.state.name}</em></li>
-        <li><span>{this.state.description}</span></li>
-        <li>Appreciation: <strong>{this.state.rating}</strong></li>
+      <ul style={review}>
+        <li style={item}><em>By: {this.state.name}</em></li>
+        <li style={item}><span>{this.state.description}</span></li>
+        <li style={item}>Appreciation: <strong>{this.state.rating}</strong></li>
       </ul>
 		);
 	}

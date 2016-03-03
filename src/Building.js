@@ -57,16 +57,27 @@ class Building extends React.Component {
       padding: 0
     }
 
+    const backbtn = {
+      position: 'fixed',
+      height: '80px',
+      width: '80px',
+      margin: '20px',
+      zIndex: 1,
+      top: '0',
+      right: '0'
+    }
+
 		return(
 			<div>
         <h1 style={title}>{this.state.building.name}</h1>
         <ul style={list}>
-				  <li><img style={image} src="http://www.wilhelminapier.nl/files/thumbnails/622eckqw.800x0.jpg" /></li>
+				  <li><img style={image} src={this.state.building.image}/></li>
   				<li style={item}>Architect: <strong>{this.state.building.architect}</strong></li>
   				<li style={item}>Location: <strong>{this.state.building.location}</strong></li>
   				<li style={item}>Build Year: <strong>{this.state.building.build_year}</strong></li>
   				<li style={item}>Appreciation: <strong>{this.state.building.rating}</strong></li>
 				</ul>
+        <Link to="/"><img style={backbtn} src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_arrow_back_48px-128.png"/></Link>
         <ReviewList id={this.props.params.buildingId} />
 
 			</div>
