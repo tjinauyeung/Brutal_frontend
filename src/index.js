@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import Brutal from './Brutal';
-import Building from './Building';
+import Brutal from './components/Brutal';
+import Building from './components/Building';
 import PageNotFound from './PageNotFound';
 import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router';
 
