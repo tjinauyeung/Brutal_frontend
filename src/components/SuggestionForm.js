@@ -1,7 +1,7 @@
 import React from 'react';
 import jQuery from 'jquery';
 
-class BuildingForm extends React.Component {
+class SuggestionForm extends React.Component {
 	constructor() {
 		super();
 	}
@@ -17,11 +17,11 @@ class BuildingForm extends React.Component {
 	render() {
 
 		return( 
-			<form className="buildingform" onSubmit={this.submitForm.bind(this)}>
+			<form className="suggestionform" onSubmit={this.submitForm.bind(this)}>
 				<input onSelect={this.clearDefaultValue.bind(this)} ref="name" defaultValue="Gustavo Capanema Palace"/>
 			</form>
 		)
 	}
 }
 
-export default BuildingForm;
+export default SuggestionForm;

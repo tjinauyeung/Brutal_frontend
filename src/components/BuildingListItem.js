@@ -6,37 +6,23 @@ class BuildingListItem extends React.Component {
 		super();
 	}
 
-componentWillMount() {
- 	this.setState({
- 		id: this.props.id,
- 		key: this.props.key,
- 		name: this.props.name,
- 		image: this.props.image.toString,
- 		location: this.props.location,
- 		build_year: this.props.build_year,
- 		architect: this.props.architect,
- 		rating: this.props.rating
- 	});     
-}
-
 	render() {
-
-		let list = {
-			listStyleType: 'none',
-			padding: 0
-		}
-
+		
 		return(
-			<Link to={"/building/" + this.state.id }>
-				<div>
-					<ul style={list}>
-						<li><img src={this.state.image}/></li>
-						<li>Name: <strong>{this.state.name}</strong></li>
-						<li>Location: <strong>{this.state.location}</strong></li>
-						<li>Build Year: <strong>{this.state.build_year}</strong></li>
-						<li>Architect: <strong>{this.state.architect}</strong></li>	
-						<li>Appreciation: <strong>{this.state.rating}</strong></li>
-					</ul>
+			<Link to={"/building/" + this.props.id }>
+				<div className="grid--25 buildinglist--item">
+					<div className="buildinglist--image">
+						<img className="buildinglist--image--bg" src={this.props.image} />
+					</div>
+					<div className="buildinglist--info">
+						<ul className="buildinglist--info--list">
+							<li>Name: <strong>{this.props.name}</strong></li>
+							<li>Location: <strong>{this.props.location}</strong></li>
+							<li>Build Year: <strong>{this.props.build_year}</strong></li>
+							<li>Architect: <strong>{this.props.architect}</strong></li>	
+							<li>Appreciation: <strong>{this.props.rating}</strong></li>
+						</ul>
+					</div>
 				</div>
 			</Link>
 		);

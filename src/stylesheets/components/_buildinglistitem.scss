@@ -1,0 +1,42 @@
+.buildinglist--item {
+	background: blue;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: -4;
+	position: relative;
+}
+
+.buildinglist--item:hover .buildinglist--info {
+	@extend .grid--25; 
+	z-index: 3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.buildinglist--item:hover .buildinglist--image {
+	opacity: 0.5;
+}
+
+.buildinglist--image {
+	width: 25vw;
+	height: 25vw;
+	min-width: 300px;
+	min-height: 300px;
+	z-index: 2;
+	overflow: hidden;
+}
+
+.buildinglist--info {
+	display: none;
+}
+
+.buildinglist--info--list {
+	padding: 0px;
+	list-style-type: none;
+}

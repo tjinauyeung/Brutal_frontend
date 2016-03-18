@@ -1,0 +1,12 @@
+body {
+	font-family: $global-font;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+	z-index: -5;
+}

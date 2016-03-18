@@ -68,7 +68,9 @@ class Building extends React.Component {
     }
 
 		return(
-			<div>
+
+      <div className="row">
+
         <h1 style={title}>{this.state.building.name}</h1>
         <ul style={list}>
 				  <li><img style={image} src={this.state.building.image}/></li>

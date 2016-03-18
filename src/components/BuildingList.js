@@ -9,7 +9,6 @@ class BuildingList extends React.Component {
 
     this.state = {
       buildings: [],
-      addbuildingform: false
     };
   }
 
@@ -26,13 +25,6 @@ class BuildingList extends React.Component {
     this.reload();
   }
 
-	showBuildingForm(event) {
-		event.preventDefault();
-		this.setState({
-			addbuildingform: !this.state.addbuildingform
-		})
-	}
-
 	renderBuilding(building) {
 		return (
 			<BuildingListItem id={building.id} key={building.id} name={building.name} image={building.image} location={building.location} build_year={building.build_year} architect={building.architect} rating={building.rating}/>
@@ -43,11 +35,6 @@ class BuildingList extends React.Component {
 
 		return(
 			<section>
-				<h2>Buildinglist</h2>
-
-				<button href="#" onClick={this.showBuildingForm.bind(this)}>Toggle Form</button>
-				{this.state.addbuildingform ? <BuildingForm onChange={this.reload.bind(this)} /> : "" }
-
 				{this.state.buildings.map(this.renderBuilding.bind(this),this)}
 			</section>
 		);
