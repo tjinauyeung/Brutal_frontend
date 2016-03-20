@@ -1,9 +1,12 @@
+@import './global/variables';
 @import './global/normalize';
 @import './fonts/fonts';
 @import './global/settings';
 @import './components/brutal';
 @import './global/grids';
+@import './components/footer';
 @import './components/suggestionform';
 @import './components/buildinglist';
 @import './components/buildinglistitem';
-@import './global/variables';
+@import './components/about';
+@import './loader/loaders';

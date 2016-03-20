@@ -1,6 +1,5 @@
 import React from 'react';
 import BuildingListItem from './BuildingListItem';
-import BuildingForm from './BuildingForm';
 import jQuery from 'jquery';
 
 class BuildingList extends React.Component {
@@ -9,6 +8,7 @@ class BuildingList extends React.Component {
 
     this.state = {
       buildings: [],
+      isLoading: true
     };
   }
 
@@ -16,7 +16,8 @@ class BuildingList extends React.Component {
     let component = this;
     jQuery.getJSON("https://whispering-refuge-37381.herokuapp.com/buildings.json", function(data){
       component.setState({
-        buildings: data.buildings
+        buildings: data.buildings,
+        isLoading: false
       });
     });
   }
@@ -32,12 +33,17 @@ class BuildingList extends React.Component {
 	}
 
 	render() {
-
-		return(
-			<section>
-				{this.state.buildings.map(this.renderBuilding.bind(this),this)}
-			</section>
-		);
+    if (this.state.isLoading) {
+      return (
+        <section className="loader-wrapper ball-scale"><div></div></section>
+      )
+    } else {
+      return(
+  			<section className="clearfix">
+  				{this.state.buildings.map(this.renderBuilding.bind(this),this)}
+  			</section>
+  		);
+    }
 	}
 }
 
