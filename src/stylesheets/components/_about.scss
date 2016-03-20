@@ -1,10 +1,19 @@
+.about--wrapper {
+	background: $about-colour;
+}
+
 .about {
-	max-width: 500px;
+	max-width: 800px;
 	padding: 50px;
+	color: $about-text-colour;
 }
 
 .about p {
 	font-size: 22px;
 	font-weight: 700;
 	line-height: 32px;
+}
+
+.about h2 {
+	margin-top: 0px;
 }

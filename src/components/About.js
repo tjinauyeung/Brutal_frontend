@@ -8,9 +8,11 @@ class About extends React.Component {
 	render() {
 
 		return( 
-			<section className="about">
-				<h1>About this site</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ratione alias quod molestiae voluptas! Sequi nisi dolor expedita. Tenetur, reiciendis ipsa aspernatur sed ratione quidem, repellendus consequatur architecto debitis quis?</p>
+			<section className="about--wrapper">
+				<div className="about">
+					<h2>About this site</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ratione alias quod molestiae voluptas! Sequi nisi dolor expedita. Tenetur, reiciendis ipsa aspernatur sed ratione quidem, repellendus consequatur architecto debitis quis?</p>
+				</div>
 			</section>
 		)
 	}

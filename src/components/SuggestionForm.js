@@ -18,7 +18,8 @@ class SuggestionForm extends React.Component {
 
 		return( 
 			<form className="suggestionform" onSubmit={this.submitForm.bind(this)}>
-				<input onSelect={this.clearDefaultValue.bind(this)} ref="name" defaultValue="Gustavo Capanema Palace"/>
+				<label>Suggest a building</label>
+				<input onSelect={this.clearDefaultValue.bind(this)} ref="name" defaultValue="Concrete watertower in Gdansk, PL"/>
 			</form>
 		)
 	}

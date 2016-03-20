@@ -1,11 +1,11 @@
 .loader-wrapper {
-	height: 25vw;
+	height: 50vw;
 	min-height: 300px;
 	width: 100vw;
 	top: 0;
 	left: 0;
 	z-index: 1000;
-	background: rgba(0,0,0,0.2);
+	background: $loader-background-colour;
 	display: flex;
 	justify-content: center;
 	align-items: center;

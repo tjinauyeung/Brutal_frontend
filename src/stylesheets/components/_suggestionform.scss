@@ -1,6 +1,7 @@
 .suggestionform {
 	background: $suggestion-colour;
 	padding: 30px;
+	font-size: 22px;
 }
 
 .suggestionform input {
@@ -13,4 +14,8 @@
 	outline: none;
 	font-size: 32px;
 	color: #000;
+}
+
+.suggestionform label {
+	@extend h2
 }

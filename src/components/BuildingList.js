@@ -35,7 +35,11 @@ class BuildingList extends React.Component {
 	render() {
     if (this.state.isLoading) {
       return (
-        <section className="loader-wrapper ball-scale"><div></div></section>
+        <section className="loader-wrapper">
+          <div className="ball-scale-multiple">
+            <div className="loader-fill-div"></div>
+          </div>
+      </section>
       )
     } else {
       return(
