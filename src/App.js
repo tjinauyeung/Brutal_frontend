@@ -1,6 +1,6 @@
 import React from 'react';
 import { IndexRoute } from 'react-router';
-import Brutal from './components/Brutal';
+import Main from './components/Main';
 import './stylesheets/app.scss';
 
 class App extends React.Component {

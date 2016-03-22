@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import Brutal from './components/Brutal';
-import Building from './components/Building';
+import MainPage from './components/MainPage';
+import BuildingPage from './components/BuildingPage';
 import PageNotFound from './PageNotFound';
 import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router';
 
 ReactDOM.render((
-	<Router history={browserHistory}>
+	<Router onChange={() => window.scrollTo(0, 0)} history={browserHistory}>
 		<Route path="/" component={App}>
-			<IndexRoute component={Brutal} />
-			<Route path="building/:buildingId" component={Building} />
+			<IndexRoute component={MainPage} />
+			<Route path="building/:buildingId" component={BuildingPage} />
 			<Route path="*" component={PageNotFound}/>
 		</Route>
 	</Router>

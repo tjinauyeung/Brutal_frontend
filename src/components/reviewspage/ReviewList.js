@@ -6,7 +6,6 @@ import jQuery from 'jquery';
 class ReviewList extends React.Component {
   constructor(){
     super();
-
     this.state = {
       reviews: [],
     };
@@ -35,7 +34,7 @@ class ReviewList extends React.Component {
 	render() {
 
 		return(
-			<div>
+			<div className="reviews--wrapper">
 				<h2>Reviews:</h2>
 				{this.state.reviews.map(this.renderReview.bind(this), this)}
 				<ReviewForm id={this.props.id} onChange={this.reload.bind(this)}/>
