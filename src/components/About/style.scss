@@ -1,0 +1,53 @@
+.about {
+  @include center-content();
+
+  width: 50%;
+  height: 250px;
+  background-color: $about-colour;
+  color: $about-text-colour;
+  padding: 30px;
+  position: relative;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ffe521;
+    transition: all 200ms ease-in-out;
+  }
+
+  &__wrapper {
+    background: $about-wrapper-colour;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  h2 {
+    font-size: 30px;
+    margin-top: 0px;
+    font-weight: 900;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 100;
+  }
+
+  p:last-child {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    margin: 0;
+  }
+
+  &__link {
+    font-weight: 900;
+  }
+
+  &.dark {
+    background-image: url('https://42ndblackwatch1881.files.wordpress.com/2009/04/c-4.jpeg');
+    background-size: cover;
+    background-position-y: 30%;
+    color: #FFF;
+  }
+}

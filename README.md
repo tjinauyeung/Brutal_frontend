@@ -1,15 +1,12 @@
-# React Starter
+# Brutalist Architecture 
+The front-end for a Brutalist Architecture review web app build using React.
 
-## Installation
-
+## Get started
 ```bash
-npm install
-npm start
+yarn install
+yarn start
 open http://localhost:3000
 ```
 
-
-------------------
-
-Simplified version of [react-transform-boilerplate](https://github.com/gaearon/react-transform-boilerplate) for the
-traineeship program.
+## License
+The code is available under the [MIT license](LICENSE).

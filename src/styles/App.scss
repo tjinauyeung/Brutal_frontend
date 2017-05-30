@@ -1,0 +1,23 @@
+@import './base/variables';
+@import './base/fonts';
+@import './base/normalize';
+@import './base/settings';
+@import './base/mixins';
+
+@import '../components/Header/style';
+@import '../components/Footer/style';
+@import '../components/About/style';
+@import '../components/Filter/style';
+@import '../components/Grid/style';
+@import '../components/GridItem/style';
+@import '../components/Loader/style';
+@import '../components/Suggestion/style';
+
+@import '../components/Reviews/style';
+@import '../components/BuildingDetail/style';
+
+@import '../pages/HomePage/style';
+@import '../pages/ReviewPage/style';
+@import '../pages/AboutPage/style';
+@import '../pages/NotFoundPage/style';
+
