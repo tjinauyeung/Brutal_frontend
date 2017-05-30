@@ -1,0 +1,26 @@
+.filter {
+  width: 100%;
+  padding: 50px 0;
+  color: #FFF;
+  font-size: 30px;
+  
+
+  label {
+    margin-right: 30px;
+    font-weight: 800;
+  }
+
+  &__input {
+    display: inline-block;
+    width: 100%;
+    background-color: transparent;
+    font-weight: 200;
+    border: none;
+    border-bottom: 1px solid #FFF;
+    padding: 10px 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

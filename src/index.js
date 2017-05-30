@@ -1,17 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import ScrollToTop from './components/ScrollToTop';
+
 import App from './App';
-import MainPage from './components/MainPage';
-import BuildingPage from './components/BuildingPage';
-import PageNotFound from './PageNotFound';
-import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ReviewPage from './pages/ReviewPage';
+import NotFound from './pages/NotFoundPage';
+
+import './styles/App.scss';
+
+import { 
+  Router, 
+  Route, 
+  Link, 
+  browserHistory, 
+  IndexRoute } from 'react-router';
 
 ReactDOM.render((
-	<Router onChange={() => window.scrollTo(0, 0)} history={browserHistory}>
-		<Route path="/" component={App}>
-			<IndexRoute component={MainPage} />
-			<Route path="building/:buildingId" component={BuildingPage} />
-			<Route path="*" component={PageNotFound}/>
-		</Route>
-	</Router>
+  <Router history={browserHistory}>
+    <Route path="/" component={App}>
+      <IndexRoute component={HomePage} />
+      <Route path="/home" component={HomePage} />
+      <Route path="/about" component={AboutPage} />
+      <Route path="/review/:reviewId" component={ReviewPage} />
+      <Route path="*" component={NotFound} />
+    </Route>
+  </Router>
 ), document.getElementById('root'));
