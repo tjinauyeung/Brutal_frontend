@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const DEFAULT_OPTIONS = {
   baseUrl: 'https://whispering-refuge-37381.herokuapp.com'
-}
+};
 
 class ApiService {
   constructor(options = {}) {
@@ -17,7 +17,5 @@ class ApiService {
     });
   }
 
-  makeUrl() {
-
-  }
+  makeUrl() {}
 }

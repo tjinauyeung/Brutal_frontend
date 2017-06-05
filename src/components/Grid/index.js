@@ -1,9 +1,9 @@
 import React from 'react';
 import GridItem from '../GridItem';
 
-const Grid = (props) => (
+const Grid = props =>
   <section className="grid">
-    { props.items.map(item => (
+    {props.items.map(item =>
       <GridItem
         key={item.id}
         id={item.id}
@@ -14,8 +14,7 @@ const Grid = (props) => (
         image={item.image}
         buildyear={item.build_year}
       />
-    )) }
-  </section>
-);
+    )}
+  </section>;
 
-export default Grid; 
+export default Grid;

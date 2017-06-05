@@ -1,6 +1,6 @@
 class RequestService {
   constructor(options = {}) {
-    this.fetch = options.fetch || window.fetch; 
+    this.fetch = options.fetch || window.fetch;
   }
 }
 

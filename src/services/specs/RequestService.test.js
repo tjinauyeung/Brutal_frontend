@@ -15,5 +15,5 @@ describe('RequestService', function() {
 
   it('should be defined', function() {
     expect(this.api).toBeDefined();
-  })
-})
+  });
+});

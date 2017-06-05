@@ -11,14 +11,9 @@ import NotFound from './pages/NotFoundPage';
 
 import './styles/App.scss';
 
-import { 
-  Router, 
-  Route, 
-  Link, 
-  browserHistory, 
-  IndexRoute } from 'react-router';
+import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router';
 
-ReactDOM.render((
+ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={HomePage} />
@@ -27,5 +22,6 @@ ReactDOM.render((
       <Route path="/review/:reviewId" component={ReviewPage} />
       <Route path="*" component={NotFound} />
     </Route>
-  </Router>
-), document.getElementById('root'));
+  </Router>,
+  document.getElementById('root')
+);

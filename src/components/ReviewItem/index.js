@@ -11,30 +11,28 @@ class Review extends React.Component {
       name: this.props.name,
       description: this.props.description,
       rating: this.props.rating
-    })
+    });
   }
 
-	render() {
-
+  render() {
     const review = {
       listStyleType: 'none',
       paddingLeft: '10px',
       backgroundColor: '#e8e8e8'
-    }
-    
+    };
 
     const item = {
       lineHeight: '30px'
-    }
+    };
 
-		return(
+    return (
       <ul style={review}>
         <li style={item}><em>By: {this.state.name}</em></li>
         <li style={item}><span>{this.state.description}</span></li>
         <li style={item}>Appreciation: <strong>{this.state.rating}</strong></li>
       </ul>
-		);
-	}
+    );
+  }
 }
 
-export default Review; 
+export default Review;

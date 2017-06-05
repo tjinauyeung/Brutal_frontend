@@ -1,10 +1,6 @@
 .suggestion {
   background: $suggestion-colour;
-<<<<<<< HEAD
-  width: 50%;
-=======
   width: 75%;
->>>>>>> WIP - feat(refac): refactoring folder structure
   padding: 70px;
   height: 250px;
   font-size: 22px;
@@ -18,22 +14,14 @@
   input {
     border: none;
     background: none;
-<<<<<<< HEAD
-    border-bottom: 3px solid #000;
-=======
     border-bottom: 1px solid #000;
->>>>>>> WIP - feat(refac): refactoring folder structure
     display: block;
     width: 100%;
     height: 60px;
     outline: none;
     font-size: 30px;
     font-weight: 400;
-<<<<<<< HEAD
-    max-width: 550px;
-=======
     max-width: 800px;
->>>>>>> WIP - feat(refac): refactoring folder structure
     color: #000;
   }
 

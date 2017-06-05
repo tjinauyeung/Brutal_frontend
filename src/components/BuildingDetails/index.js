@@ -11,23 +11,23 @@ class Building extends React.Component {
       letterSpacing: '-3px',
       margin: '0px',
       color: 'black',
-      textTransform: 'uppercase',
-    }
+      textTransform: 'uppercase'
+    };
 
     const item = {
       lineHeight: '30px',
       fontWeight: 'normal'
-    }
+    };
 
     const image = {
       maxWidth: '600px',
       marginBottom: '10px'
-    }
+    };
 
     const list = {
       listStyleType: 'none',
       padding: 0
-    }
+    };
 
     const backbtn = {
       position: 'fixed',
@@ -37,21 +37,27 @@ class Building extends React.Component {
       zIndex: 1,
       top: '0',
       right: '0'
-    }
+    };
 
-    return(
+    return (
       <div className="building--wrapper">
         <h1 style={title}>{this.props.name}</h1>
         <ul style={list}>
-          <li><img style={image} src={this.props.image}/></li>
-          <li style={item}>Architect: <strong>{this.props.architect}</strong></li>
+          <li><img style={image} src={this.props.image} /></li>
+          <li style={item}>
+            Architect: <strong>{this.props.architect}</strong>
+          </li>
           <li style={item}>Location: <strong>{this.props.location}</strong></li>
-          <li style={item}>Build Year: <strong>{this.props.build_year}</strong></li>
-          <li style={item}>Appreciation: <strong>{this.props.rating}</strong></li>
+          <li style={item}>
+            Build Year: <strong>{this.props.build_year}</strong>
+          </li>
+          <li style={item}>
+            Appreciation: <strong>{this.props.rating}</strong>
+          </li>
         </ul>
       </div>
     );
   }
 }
 
-export default Building; 
+export default Building;

@@ -19,12 +19,15 @@ class HomePage extends Component {
 
   getBuildings() {
     let component = this;
-    $.getJSON("https://whispering-refuge-37381.herokuapp.com/buildings.json", function(data){
-      component.setState({
-        items: data.buildings,
-        isLoading: false
-      });
-    });
+    $.getJSON(
+      'https://whispering-refuge-37381.herokuapp.com/buildings.json',
+      function(data) {
+        component.setState({
+          items: data.buildings,
+          isLoading: false
+        });
+      }
+    );
   }
 
   componentDidMount() {
@@ -32,14 +35,12 @@ class HomePage extends Component {
   }
 
   render() {
-    return(
+    return (
       <div className="container">
         <Header />
         <About />
         <Filter />
-        { this.state.isLoading
-          ? <Loader /> 
-          : <Grid items={this.state.items} /> }
+        {this.state.isLoading ? <Loader /> : <Grid items={this.state.items} />}
         <Suggestion />
         <Footer />
       </div>
@@ -47,4 +48,4 @@ class HomePage extends Component {
   }
 }
 
-export default HomePage; 
+export default HomePage;

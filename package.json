@@ -7,13 +7,9 @@
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
     "start": "node server.js",
-<<<<<<< HEAD
-    "lint": "eslint src/"
-=======
     "lint": "eslint src/",
     "test": "jest",
     "test:watch": "jest --watch"
->>>>>>> WIP - feat(refac): refactoring folder structure
   },
   "keywords": [
     "react",
@@ -48,10 +44,7 @@
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.13.3",
     "file-loader": "^0.8.5",
-<<<<<<< HEAD
-=======
     "jest": "^20.0.4",
->>>>>>> WIP - feat(refac): refactoring folder structure
     "jquery": "^3.2.1",
     "node-sass": "^3.4.2",
     "react-hot-loader": "next",

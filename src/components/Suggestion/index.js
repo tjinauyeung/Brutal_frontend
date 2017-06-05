@@ -16,16 +16,19 @@ class Suggestion extends React.Component {
   }
 
   render() {
-    return( 
+    return (
       <div className="suggestion-wrapper">
         <form className="suggestion" onSubmit={this.handleSubmit}>
           <div>
             <label>Suggest a building</label>
-            <input onClick={this.handleClick} defaultValue="Concrete watertower in Gdansk, PL"/>
+            <input
+              onClick={this.handleClick}
+              defaultValue="Concrete watertower in Gdansk, PL"
+            />
           </div>
         </form>
       </div>
-    )
+    );
   }
 }
 

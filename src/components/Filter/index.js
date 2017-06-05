@@ -9,10 +9,14 @@ class Filter extends Component {
     return (
       <div className="filter">
         <label htmlFor="filter-input">Filter Buildings</label>
-        <input className="input filter__input" id="filter-input" placeholder="Corbusier" />
+        <input
+          className="input filter__input"
+          id="filter-input"
+          placeholder="Corbusier"
+        />
       </div>
-    )
+    );
   }
-};
+}
 
 export default Filter;
