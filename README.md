@@ -1,3 +1,5 @@
+![screenshot of project](https://github.com/tjinauyeung/brutalist-architecture-frontend/blob/master/screenshot.png)
+
 # Brutalist Architecture 
 The front-end for a Brutalist Architecture review web app build using React.
 
